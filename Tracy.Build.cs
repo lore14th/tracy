@@ -28,6 +28,8 @@ public class TracyClient : TinfoilProjectBase
 		config.IncludePaths.Add(@"[project.SharpmakeCsPath]/public");
 
 		config.Defines.Add("TRACY_ENABLE");
+		config.Defines.Add("TRACY_ON_DEMAND");
+		config.Defines.Add("TRACY_FIBERS");
 
 		ExcludeFolder(config, target, "client");
 		ExcludeFolder(config, target, "common");
